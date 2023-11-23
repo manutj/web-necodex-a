@@ -1,0 +1,36 @@
+/* Selector universal */
+
+* {
+    color: white;
+    background-color: black;
+}
+
+
+/* Selector de grupo */
+#div-container, .parrafo-class, h1 {
+    color: white;
+    background-color: purple;
+    font-family: monospace;
+}
+
+
+/* selector de atributo */
+[href] {
+    background-color: lightgreen;
+    color: black;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+
+/* selector de pseudo clases */
+h1:hover{
+    background-color: aqua;
+}
+
+/* selector de pseudo elemento */
+p::first-line{
+    background-color: orange;
+}
+
+

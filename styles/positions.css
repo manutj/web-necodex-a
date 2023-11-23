@@ -1,0 +1,27 @@
+/* POSICIONAR ELEMENTOS MEDIANTE FLOAT */
+
+
+/* float: right; Me permite hacer flotante el elemento a la derecha de mi pantalla. Todo el contenido que se encuentre junto a el, será desplazado a la izquierda de la pantalla si no hay algun elemento que tenga un clear a la derecha */
+img{
+    float: right;
+    height: 150px;
+}
+
+
+/* float: left; Me permite hacer flotante el elemento a la izquierda de mi pantalla. Todo el contenido que se encuentre junto a el, será desplazado a la derecha de la pantalla si no hay algun elemento que tenga un clear a la izquierda */
+.button{
+    float: left;
+    background: gray;
+    font-size: 48px;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+    border: 3px solid black;
+    margin-right: 10px;
+}
+
+
+/* La propiedad clear me permite que un elemento no sea vea afectado por un flotante, en este caso, limpiará el flotante de la izquierda y se colocará siguiendo su flujo natural. Como es un parrafo, se comportará como un elemento en bloque y se pondrá debajo del botón. También se puede usar RIGHT (para limpiar flotante a la derecha) Y BOTH (para limpiar flotante a ambos lados) */
+.clear{
+    clear: left;
+}

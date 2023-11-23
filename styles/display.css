@@ -1,0 +1,33 @@
+/* Elementos inline block permiten dar caracteristicas de linea y de bloque al mismo tiempo, como dar tamanios y margenes  */
+.elemento1{
+    background-color: red;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+.elemento2{
+    background-color: blue;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+/* Podemos cambiar el comportamiento natural de elementos en bloque (como el div) para que se actue como elemento en linea (ponerse a la par de otro y no admitir tamanios ni margenes)  */
+.elemento5{
+    display: inline;
+    background-color: yellow;
+}
+
+
+/* Podemos cambiar el comportamiento natural de elementos en linea (como el span) para que actuen como bloques (ponerse uno debajo de otro y tener un tamanio especifico o que ocupe todo el ancho de la pantalla) */
+span{
+    background-color: orange;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
