@@ -35,7 +35,9 @@ body{
     width: 240vh;
 }
 
-.padre{
+/* PROBAR CON STICKY Y CON FIXED PARA VER LA DIFERENCIA */
+
+/* .padre{
     width: 300px;
     height: 300px;
     background-color: green; 
@@ -57,5 +59,59 @@ body{
     overflow-y: scroll;
     border: 5px solid black;
     margin: 50px;
+} */
+
+
+/* POSITION RELATIVE */
+
+/* .padre{
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    position: relative;
+    top: 50px;
+    left: 50px;
 }
 
+.hijo{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+.padre-2{
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    position: relative;
+    
+} */
+
+
+
+
+
+/* POSITION ABSOLUTE */
+
+/* Si el elemento padre de otro elemento hijo con position absolute tiene una posicion diferente a static, entonces el elemento hijo lo tomará como referencia para posicionarse y si este elemento padre tiene una posicion static, el elemento hijo con position absolute tomará como refrencia la parte superior izquierda del body para posicionarse */
+
+/* PROBAR COLOCANDO UN POSICION STATIC AL PADRE */
+
+.padre{
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    position: relative;
+   margin-top: 50px;
+}
+
+.hijo{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+    top: 350px;
+}
