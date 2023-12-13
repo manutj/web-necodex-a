@@ -14,15 +14,25 @@ const persona = {
 
 //ACCEDER A LAS PROPIEDADES DEL OBJETO MEDIANTE EL PUNTO O LOS CORCHETES
 
-/* 
 
  console.log(persona.hablar())  // EJECUTAMOS LA FUNCION CON LOS PARENTESIS
  console.log(persona.nombre)
  console.log(persona['hablar']()) // EJECUTAMOS LA FUNCION CON LOS PARENTESIS
  console.log(persona['nombre'])
 
- */
+ 
+const superheroe = {
+    nombre: 'Superman',
+    peso: 30,
+    edad: 35,
+    empresa: 'Marvel'
+}
 
+
+console.log(`${superheroe.nombre} tiene ${superheroe.edad}, pesa ${superheroe.peso}`)
+
+/* *******************************DESTRUCTURACION ******************************** */
+console.log(`${nombre} tiene ${edad}, pesa ${peso}`)
 
 
 //DECLARAR UN OBJETO CONSTRUIDO
