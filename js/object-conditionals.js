@@ -15,10 +15,10 @@ const persona = {
 //ACCEDER A LAS PROPIEDADES DEL OBJETO MEDIANTE EL PUNTO O LOS CORCHETES
 
 
- console.log(persona.hablar())  // EJECUTAMOS LA FUNCION CON LOS PARENTESIS
- console.log(persona.nombre)
- console.log(persona['hablar']()) // EJECUTAMOS LA FUNCION CON LOS PARENTESIS
- console.log(persona['nombre'])
+ //console.log(persona.hablar())  // EJECUTAMOS LA FUNCION CON LOS PARENTESIS
+ //console.log(persona.nombre)
+ //console.log(persona['hablar']()) // EJECUTAMOS LA FUNCION CON LOS PARENTESIS
+ //console.log(persona['nombre'])
 
  
 const superheroe = {
@@ -29,10 +29,10 @@ const superheroe = {
 }
 
 
-console.log(`${superheroe.nombre} tiene ${superheroe.edad}, pesa ${superheroe.peso}`)
+//console.log(`${superheroe.nombre} tiene ${superheroe.edad}, pesa ${superheroe.peso}`)
 
 /* *******************************DESTRUCTURACION ******************************** */
-console.log(`${nombre} tiene ${edad}, pesa ${peso}`)
+//console.log(`${nombre} tiene ${edad}, pesa ${peso}`)
 
 
 //DECLARAR UN OBJETO CONSTRUIDO
@@ -136,5 +136,39 @@ let calificacion =
     console.log('He obtenido un', calificacion)
 
 */
+
+
+
+
+/* *************************************** OPERADORES LOGICOS *************************** */
+
+                        //AND (&&)
+
+/* let numero1 = prompt('Escribe un numero')
+
+ if (numero1 > 15 && numero1 <50){
+     console.log('numero valido')
+} else {
+     console.log('Numero invalido') 
+ }
+ */
+
+
+
+
+
+                            //OR
+
+/* let numero2 = prompt('Escribe un numero')
+
+if (numero2 == 15 || numero2 == 50){
+    console.log('numero valido')
+} else {
+    console.log('Numero invalido') 
+}
+
+*/
+
+
 
 
