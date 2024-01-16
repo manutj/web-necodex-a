@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Nodo de tipo elemento -->
+    <h1>
+        <!-- No de tipo texto -->
+        Nodo de tipo elemento
+    </h1> 
+    <!-- Nodo de tipo comentario -->
+
+
+    <style>
+        html{font-family: sans-serif; color: #333;}
+        body{max-width: 500px; margin: 0 auto; padding: 0 15px;}
+        div, article {padding: 10px; margin: 5px; border: 1px solid; color: #dedede;}
+    </style>
+
+    <h1>Accesando a los elementos con el DOM</h1>
+    <h2> ID (#demo)</h2>
+    <div id="demo">Accesar al div por ID</div>
+
+    <h2> ID (#link) Accesar al enlace por ID para cambiar atributo</h2>
+    <a id="link" href="https://www.google.com">Google</a>
+    <button onclick="cambiarAtributo()">Cambiar atributo</button>
+
+
+    <div class="demo">Acceder por clase (1)</div>
+    <div class="demo">Acceder por clase (2)</div>
+
+
+    <article>Accesar por etiqueta</article>
+    <article>Accesar por etiqueta</article>
+
+    <div id="caja">
+<p class="primero">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis quos, dolorum dolore repellendus ipsa vero, quas blanditiis, ea beatae consequatur culpa temporibus. Quam laborum molestiae repellat, nam incidunt ratione dignissimos?</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis quos, dolorum dolore repellendus ipsa vero, quas blanditiis, ea beatae consequatur culpa temporibus. Quam laborum molestiae repellat, nam incidunt ratione dignissimos?</p>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis quos, dolorum dolore repellendus ipsa vero, quas blanditiis, ea beatae consequatur culpa temporibus. Quam laborum molestiae repellat, nam incidunt ratione dignissimos?</p>
+    </div>
+
+    <script src="../js/dom.js"></script>
+</body>
+</html>

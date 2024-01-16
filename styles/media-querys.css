@@ -1,0 +1,97 @@
+* {
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  h1 {
+    font-size: 50px;
+  }
+  
+  
+  h3 {
+    font-size: 50px;
+  }
+  
+  
+  .pricing-heading {
+    padding-top: 40px;
+    margin: 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .box-details {
+    padding-top: 20px;
+    font-weight: bold;
+  }
+  
+  
+  .btn {
+    margin-top: 30px;
+    padding: 5px;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+  }
+  
+  
+  .pricing {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  
+  .btn:hover {
+    background-color: white;
+    color: black;
+  }
+  .section {
+    text-align: center;
+  }
+  .box {
+    background-color: #eef5ff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    height: 400px;
+  }
+
+
+  /* Dispositivos con pantalla pequeña (la mayoria de smartphones: menores o iguales a 480px de ancho o width) */
+
+  /* Dispositivos con pantalla mediana (tablets : mayores a 480px y menores o iguales a 768px de ancho o width) */
+
+  /* Dispositivos con pantalla grande o extra grande (laptops, PC, televisores : mayores a 768px de ancho o width) */
+  
+/*   
+  @media (max-width: 769px) {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+  @media (max-width: 480px) {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  } */
+
+   @media (max-width: 480px) and (orientation: portrait) {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  } 
+  
+  
+   @media (min-width: 769px) {
+    .container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  } 
