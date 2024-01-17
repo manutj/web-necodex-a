@@ -33,7 +33,7 @@ console.log(parrafos)
 
 for(i=0 ; i < parrafos.length ; i++){
     parrafos[i].style.backgroundColor = "orange";
-    }
+}
 
 //INVESTIGAR SOBRE QUERYSELECTOR(#demo, .demo) Y QUERYSELECTORALL(.demo)
 

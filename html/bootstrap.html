@@ -8,8 +8,51 @@
 </head>
 <body>
     <div class="container-fluid">
-        <p class="bg-danger">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nobis voluptates facere doloribus deserunt consectetur accusantium voluptatem vitae obcaecati ipsa iste, minus asperiores dolor inventore doloremque excepturi! Odio, minima atque.</p>
+       <!-- <div class="row">
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+        <div class="col-1">1</div>
+       </div>
+       <div class="row">
+        <div class="col-4 bg-primary">1</div>
+        <div class="col-4 bg-danger">1</div>
+        <div class="col-4 bg-warning">1</div>
+       </div>
+       <div class="row">
+        <div class="col-6 bg-primary">1</div>
+        <div class="col-3 bg-danger">1</div>
+        <div class="col-3 bg-warning">1</div>
+       </div> -->
+
+       <!-- <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 border">12</div>
+        <div class="col-12 col-sm-6 col-md-4 border">12</div>
+        <div class="col-12 col-sm-6 col-md-4 border">12</div>
+       </div> -->
+
+       <div class="container">
+        <label for="inputColor" class="form-label">color picker</label>
+        <input id="inputColor" class="form-control form-control-color w-100 mb-3" value="#563d7c" type="color" title="Escoge un color">
+        <button id="boton" class="btn btn-primary w-100">Visualizar</button>
+       </div>
+       <div class="container mt-5">
+        <p id="textoHexa" class="lead text-center">
+            #563d7c
+        </p>
+        <div id="cardColor" class="card p-5" style="background-color: #563d7c;">
+
+        </div>
+       </div>
     </div>
-    <button class="btn btn-danger">Click</button>
+   <script src="../js/bootstrap.js"></script>
 </body>
 </html>
