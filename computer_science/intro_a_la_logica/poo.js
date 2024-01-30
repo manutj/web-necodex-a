@@ -1,7 +1,7 @@
 class Personaje {
     //PROPIEDADES
     nombre; //undefined
-    #nombrePrivado
+    #nombrePrivado // Propiedad privada
     tipo = 'villano';
     vidas = 5;
     energia = 10;
@@ -44,6 +44,9 @@ console.log(luigi.Saludo())
 
 
 const bowser = new Personaje('Koopa', 'Villano', ()=>{return 'Atacando doblemente'})
+
+
+//ESTUDIEN PROPIEDADES Y METODOS PUBLICAS Y PRIVADAS DENTRO DE LAS CLASES
 
 
 
