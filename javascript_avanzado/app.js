@@ -32,13 +32,27 @@ console.log("3")
 
 
 
-const ejemploCallback = (otraFuncion) => {
-    otraFuncion(console.log('Multiplicacion de dos numeros'))
+const ejemploCallback = (callback) => {
+    callback(3,5)
 }
 
-ejemploCallback(()=>{
-    console.log(3*3)
-})
+let multiplicacion = (a,b) => {
+    console.log(a*b)
+}
+
+let suma = (a,b) => {
+    console.log(a+b)
+}
+
+let resta = (a,b) => {
+    console.log(a-b)
+}
+
+let division = (a,b) => {
+    console.log(a/b)
+}
+
+ejemploCallback(resta)
 
 
 let usuarios = [{nombre:'Daniel', edad:30}, {nombre:'Manuel', edad:25}, {nombre:'Kevin', edad:17},{nombre:'Glenda', edad:21},{nombre:'Alan', edad:16}]
