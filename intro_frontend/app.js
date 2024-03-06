@@ -1,10 +1,10 @@
-import multiplicacion, {suma, resta} from './operaciones'
+import multiplicacion, {suma, resta} from './operaciones.js'
 //import producto from './operaciones'
-import * as geometria from './geometria'
+import * as geometria from './geometria.js'
 
-suma(5,6);
-resta(10,7)
-multiplicacion(4,7)
+console.log(suma(5,6)) 
+console.log(resta(10,7)) 
+console.log(multiplicacion(4,7)) 
 //console.log(restar(10,7));
 
 console.log(geometria.areaCirculo(20))

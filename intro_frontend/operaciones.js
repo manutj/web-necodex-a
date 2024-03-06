@@ -1,7 +1,7 @@
-  export const sumar = (a, b) => console.log(a + b)  
-  export const restar = (a, b) => console.log(a - b) 
+   export const sumar = (a, b) => a + b  
+   export const restar = (a, b) => a - b 
 
- const producto = (a, b) => console.log(a * b)
+ const producto = (a, b) => a * b
 
 
   //sumar(3,5)
