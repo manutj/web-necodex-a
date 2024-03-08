@@ -1,5 +1,10 @@
-import React from 'react'
 
-const App = () => <h1 style={{color:'red'}}>Hola Alejandro!!</h1> //JSX
+const App = () =>{
+return (
+    <div className="container">
+    <h1>Hola Alejandro!!</h1> 
+    </div>
+)
+} 
 
 export default App
