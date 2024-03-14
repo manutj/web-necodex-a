@@ -1,6 +1,5 @@
 //import { useState } from 'react'
 //import './App.css'
-import React from 'react'
 import HelloWord from './components/HelloWord.jsx'
 import PropsFunction from './components/PropsFunction.jsx'
 
@@ -18,20 +17,19 @@ function App() {
 
   return(
     <>
-    {/* <HelloWord name={'Alan'} colorText={'red'} objeto={{nombre: 'Jose'}}/>
-    <PropsFunction {...InfoPersona} infoPersona={InfoPersona2}  numero={10} booleano={true}/> */}
+    <HelloWord name={'Alan'} colorText={'red'} objeto={{nombre: 'Jose'}} saludo={()=>alert('Hola mundo')}/>
+    {/* <PropsFunction {...InfoPersona} infoPersona={InfoPersona2}  numero={10} booleano={true}/> */}
 
       {/* <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-      </div>
-      */}
-      {parrafo}
+      </div> */}
+     
+      {/* {parrafo}
   <section className='tarjetas-contenedor'>
     {info.map(usuario=>{
-      
-      return(
+      return usuario.edad > 18 && (
         <div className='tarjeta'>
           <h1>{`Nombre: ${usuario.nombre}`}</h1>
           <h2>{`Edad: ${usuario.edad}`}</h2>
@@ -39,7 +37,7 @@ function App() {
       )
       
     })}
-  </section>
+  </section> */}
 
     </>
   )

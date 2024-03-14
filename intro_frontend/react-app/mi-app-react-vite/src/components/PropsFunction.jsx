@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const PropsFunction = ({numero, booleano, nombre, pais, edad, infoPersona:{nombreV,paisV,edadV}}) => {
   return (
