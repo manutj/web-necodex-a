@@ -49,13 +49,27 @@ const HelloWord = ({name, colorText, objeto, saludo}) => {
 const [edad, setEdad] = useState(0) // Valor por defecto
 
 
-//ACCION QUE SE REALIZA CUANDO EL COMPONENTE SE HA RENDERIZADO Y MONTADO EN EL DOM
+//USE EFFECT EJECUTA UNA INSTRUCCION O SERIE DE INSTRUCCIONES CUANDO EL COMPONENTE SE HA RENDERIZADO Y MONTADO EN EL DOM
+
+//HAY DE TRES TIPOS:
+
+//1. SE EJECUTA LA PRIMERA VEZ QUE SE MONTA EL COMPONENTE, CUANDO HAY UN CAMBIO DE ESTADO DENTRO DEL COMPONENTE Y CUANDO SE VUELVE A RECARGAR EL COMPONENTE
+
+useEffect(() => {
+  console.log('Se monto el componente funcional sin el corchete de las dependencias')
+})
+
+//2. SE EJECUTA SOLO LA PRIMERA VEZ QUE SE MONTA EL COMPONENTE O CUANDO SE VUELVE A RECARGAR EL COMPONENTE
+
 useEffect(() => {
   console.log('Se monto el componente funcional sin dependencias')
-  setTimeout(()=>{
-    setTexto('Se actualizo el texto del boton con un useEffect')
-  }, 5000)
+  // setTimeout(()=>{
+  //   setTexto('Se actualizo el texto del boton con un useEffect')
+  // }, 5000)
 }, [])
+
+
+//3. SE EJECUTA LA PRIMERA VEZ QUE SE CARGA EL COMPONENTE Y CUANDO CAMBIA DE VALOR LO QUE HEMOS PUESTO DENTRO DEL CORCHETE DE DEPENDENCIAS O CUANDO SE VUELVE A RECARGAR EL COMPONENTE
 
 useEffect(() => {
   console.log('Se monto el componente funcional con depencias')
