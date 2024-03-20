@@ -1,8 +1,9 @@
 import { useState } from 'react'
 //import './App.css'
-import HelloWord from './components/HelloWord.jsx'
+import HelloWord from './components/FunctionalComponent.jsx'
 import PokemonInfo from './components/PokemonInfo.jsx'
 import PropsFunction from './components/PropsFunction.jsx'
+import HelloWordClass from './components/ClassComponent.jsx'
 
 function App() {
   let titulo = 'Hola, soy el titulo'
@@ -32,7 +33,8 @@ function App() {
 
   return(
     <>
-    <PokemonInfo name={'charizard'}/>
+    <HelloWordClass name={'Ricardo'}/>
+    {/* <PokemonInfo name={'charizard'}/> */}
     {/* <HelloWord countState={count} name={'Alan'} colorText={'red'} objeto={{nombre: 'Jose'}} saludo={()=>alert('Hola mundo')}/> */}
     {/* <PropsFunction {...InfoPersona} infoPersona={InfoPersona2}  numero={10} booleano={true}/> */}
     <div>
