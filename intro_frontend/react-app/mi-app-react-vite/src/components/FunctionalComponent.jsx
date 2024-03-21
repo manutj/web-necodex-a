@@ -11,7 +11,7 @@ import { useState, useEffect } from "react" // HOOK USESTATE, HOOK USEEFFECT
 
 //1. UTILIZAR EL OBJETO GLOBAL PROPS EN LOS PARENTESIS DEL COMPONENTE
 
-// const HelloWord = (props) => {
+// const HelloWordFunction = (props) => {
 //   return(
 //     <div>
 // <h1 style={{color: props.colorText}}>Hello, {props.name}</h1>
@@ -40,7 +40,7 @@ import { useState, useEffect } from "react" // HOOK USESTATE, HOOK USEEFFECT
 
 //3. UTILIZAR DIRECTAMENTE LA DESTRUCTURACION EN LOS PARENTESIS
 
-const HelloWord = ({name, colorText, objeto, saludo}) => {
+const HelloWordFunction = ({name, colorText, objeto, saludo}) => {
 
 
   // EL ESTADO es un valor de cualquier tipo que puede tener un valor por defecto o no tenerlo y ademas se puede actualizar cuanto veces nosotros lo necesitemos y con cualquier tipo de dato
@@ -88,5 +88,5 @@ useEffect(() => {
   )
 }
 
-export default HelloWord
+export default HelloWordFunction
 

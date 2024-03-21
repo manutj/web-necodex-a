@@ -1,5 +1,5 @@
 
-
+// RECIBIMOS LOS PROPS ENVIADOS EN EL COMPONENTE APP.JSX
 const PropsFunction = ({numero, booleano, nombre, pais, edad, infoPersona:{nombreV,paisV,edadV}}) => {
   return (
     <>
