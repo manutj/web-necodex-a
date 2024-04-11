@@ -3,7 +3,7 @@ import React from 'react'
 const TodoItem = () => {
   return (
    <li>
-    Aqui se agregaran las tareas
+    Aqui se mostraran las tareas
     <button onClick={()=>'Funcion que eliminara la tarea'}>Completar</button>
    </li>
   )
