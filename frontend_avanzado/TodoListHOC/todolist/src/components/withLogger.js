@@ -1,4 +1,4 @@
-import React, {useEffect} from ' react'
+import React, {useEffect} from 'react'
 
 const withLogger = (WrappedComponent) => {
     const WithLogger = () => {
@@ -13,7 +13,7 @@ const withLogger = (WrappedComponent) => {
           console.log(`El componente ${WrappedComponent.name} se ha actualizado`)
         })
         
-       return <WrappedComponent/>
+       //return <WrappedComponent/>
     }
 return WithLogger
 }

@@ -1,16 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import TodoItem from './TodoItem'
 import TodoForm from './TodoForm'
+import withLogger from './withLogger'
 
 const TodoList = () => {
     const [tareas, setTareas] = useState([])
     const [nuevaTarea, setNuevaTarea] = useState('')
-
-    useEffect(() => {
-    console.log(tareas)
-    })
     
-
     const agregarTarea = () => {
         if(nuevaTarea.trim() !== ''){
           setTareas((prevTareas)=> [...prevTareas, nuevaTarea])
@@ -18,11 +14,24 @@ const TodoList = () => {
         }
     }
 
+    const completarTarea = (index) => {
+      setTareas((prevTareas)=>{
+        const tareasActuales = [...prevTareas]
+        tareasActuales.splice(index, 1)
+        return tareasActuales
+      })
+    }
+
 
   return (
     <>
     <div>TodoList</div>
     <TodoForm nuevaTarea={nuevaTarea} setNuevaTarea={setNuevaTarea} agregarTarea={agregarTarea}/>
+    <ul>
+      {tareas.map((tarea, index)=>(
+        <TodoItem tarea={tarea} onComplete={()=>completarTarea(index)}/>
+      ))}
+    </ul>
     </>
   )
 }

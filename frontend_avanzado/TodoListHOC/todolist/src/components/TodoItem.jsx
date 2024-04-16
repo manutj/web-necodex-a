@@ -1,10 +1,10 @@
 import React from 'react'
 
-const TodoItem = () => {
+const TodoItem = ({tarea, onComplete}) => {
   return (
    <li>
-    Aqui se mostraran las tareas
-    <button onClick={()=>'Funcion que eliminara la tarea'}>Completar</button>
+    {tarea}
+    <button onClick={onComplete}>Completar</button>
    </li>
   )
 }
