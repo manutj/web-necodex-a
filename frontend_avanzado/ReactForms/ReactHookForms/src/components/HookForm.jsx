@@ -4,14 +4,16 @@ import { Input, Checkbox, Slider } from "antd";
 
 const HookForm = () => {
   const [data, setData] = useState({});
-
   //Metodos que sirven para manejar formularios (capturar datos y procesarlos para enviarlos)
   const {
     register,
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isDirty, isValid, touchedFields, dirtyFields },
+    watch
   } = useForm();
+
+  const watchisDeveloper = watch('isDeveloper')
 
 
   //funcion pasada al metodo handleSubmit para setear los datos en un estado
@@ -23,7 +25,7 @@ const HookForm = () => {
     <div className="w-full flex justify-center items-center bg-gray-900 p-8 border-r border-dashed">
       <div
         className="w-1/2 shadow-lg rounded-md bg-white p-8 flex flex-col"
-        style={{ height: "375px" }}
+        style={{ height: "395px" }}
       >
         <h2 className="text-center font-medium text-2xl mb-4">
           React Hook Form
@@ -80,7 +82,9 @@ const HookForm = () => {
               }}
             />
           </div>
-
+                {
+          watchisDeveloper ?
+          <div className="flex w-full">
           <div>
             <label>Experiencia en años</label>
             <Controller
@@ -90,12 +94,24 @@ const HookForm = () => {
             />
           </div>
 
+          <Controller
+            control={control}
+            name="meses"
+            render={({ field }) => <Input className="flex-1 rounded-md p-2" {...field} placeholder="Experiencia en meses" />}
+          />
+        </div>
+          : null
+                }
+
           <button type='submit' className='flex justify-center p-2 rounded-md w-1/2 self-center bg-gray-900 text-white hover:bg-gray-800'>
                 <span>Enviar</span>
             </button> 
         </form>
         <div className="h-4">
           <p>Data: {JSON.stringify(data)}</p>
+          {/* <p>Es desarrollador: {JSON.stringify(watchisDeveloper)}</p> */}
+          {/* <p>Campos sucios: {JSON.stringify(dirtyFields)}</p> */}
+          <p>Campos clickeados: {JSON.stringify(touchedFields)}</p>
         </div>
       </div>
     </div>
