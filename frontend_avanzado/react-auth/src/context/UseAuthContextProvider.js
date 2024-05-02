@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "@/context/AuthContextProvider";
 
-export const useSongContext = () => {
+export const useAuthContext = () => {
  const context = useContext(AuthContext)
   return context
 }
 
- 

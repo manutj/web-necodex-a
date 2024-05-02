@@ -1,0 +1,43 @@
+$menu-color : #3d3d3d;
+
+@mixin header-link {
+   color: $menu-color; 
+   text-decoration: none;
+   letter-spacing: 2px;
+}
+
+@mixin header-border($size: 2px) {
+    border-bottom: solid $menu-color $size ;
+}
+
+
+.header{
+    background-color: #dadada;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+
+    &__nav-list{
+        display: flex;
+        list-style: none;
+        column-gap: 20px;
+        flex-wrap: wrap
+    }
+
+    &__logo{
+      @include header-link();
+    }
+
+    &__item-link{
+        @include header-link();
+
+        &--is-active{
+            @include header-border($size: 3px);
+        }
+        &:hover{
+            @include header-border();
+        }
+    }
+
+}

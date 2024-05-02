@@ -1,5 +1,6 @@
 import React, {useState, useEffect, createContext} from 'react'
 import { jwtDecode } from "jwt-decode"
+import { useNavigate } from 'react-router-dom'
 
 const AuthContext = createContext()
 
@@ -7,6 +8,7 @@ const AuthContextProvider = ({children}) => {
 
     const [isAuth, setIsAuth] = useState(false)
     const [userPayload, setUserPayload] = useState(null)
+
 
 
     const login = (token) => {
