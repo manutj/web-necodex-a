@@ -1,0 +1,31 @@
+1.Persistencia e independencia de datos:
+
+Lógico: capacidad de modificar el esquema conceptual sin necesidad de desarrollar de nuevo la aplicacion web
+
+Físico:  capacidad de modificar el codigo de la base de datos sin necesidad de desarrollar de nuevo la aplicacion web
+
+
+
+2.Redudancia minima: Buscar la manera de no repetir datos en nuestra logica
+
+
+
+3.Seguridad de los datos y auditoria: Saber quien o qué realizo los cambios y en que momento
+
+
+4.Concurrencia: Debemeos asegurarnos que nuestra base de datos pueda procesar diferentes peticiones de multiples usuarios sin que se vea colapsada
+
+
+
+5.Integridad de los datos: se refiere a la seguridad que implementemos a la hora de almacenar y consumir los datos de la base de datos
+
+
+
+
+6.Consultas complejas optimizadas: Capacidad de responder con gran cantidad de informacion el menor tiempo posible
+
+
+
+7.Respaldo y recuperacion: Programar un respaldo periodicamente en caso de la perdida de datos para que estos puedan ser restaurados a la forma en que se encontraban
+
+

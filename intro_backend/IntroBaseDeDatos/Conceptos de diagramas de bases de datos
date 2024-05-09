@@ -1,0 +1,28 @@
+ENTIDADES O TABLAS.
+
+Entidades fuertes o principal: No depende de otra para poder existir. Se repreentan mediante un rectangulo en el diagrama entidad-relacion
+
+Entidades débiles o dependendientes: Depende de otra para poder existir. Se representan con un rectangulo con doble línea
+
+
+ATRIBUTOS DE LA ENTIDAD
+
+Simples: son aquellos que no se pueden dividir y representan una caracteristica basica. Se representan con un ovalo
+
+
+Compuestos: son aquellos que se dividen en otros atributos simples, tambien se representan con un ovalo
+
+
+Multi valuado: son aquellos que pueden tener mas de un valor, se representan con ovalo con doble linea
+
+
+derivado: son aquellos que su valor depende de otro valor, se representan con un ovalo punteado
+
+
+
+
+LLAVES(VALORES UNICOS DE UNA ENTIDAD)
+
+Primarias: indentifican de forma unica a un registro de una tabla o entidad fuerte. Se representa subrayando el nombre de la llave primaria
+
+Foraneas: identifican de forma unica a cada registro de una entidad que esta relacionado con otra entidad, se representa subrayando el nombre de la llave foranea pero punteada
