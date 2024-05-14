@@ -1,0 +1,95 @@
+DML(DATA MANIPULATION LANGUAGE) : Nos sirve para modificar datos de las tablas de una base de datos
+
+DDL(DATA DEFINITION LANGUAGE) : Nos permite definir tablas y modificarlas en una base de datos
+
+
+DDL: CREATE(crear), ALTER(actualizar), DROP(eliminar)
+
+**********************CODIGO SQL *************************
+
+CREATE TABLE Test(
+    Id integer
+    FirstName varchar(25)
+    LastName varchar(25)
+    Age integer
+)
+
+
+DROP TABLE Test
+
+
+ALTER TABLE Test ADD date date
+
+
+
+********************** CODIGO SQL *************************
+
+DML: INSERT(insertar) UPDATE(actualizar) DELETE(eliminar) SELECT (seleccionar)
+
+INSERT INTO Test(Id, FirstName, LastName, Age) VALUES(1, 'Rafael', 'Rodriguez', 20) --Agregar unos 7 registros
+
+UPDATE Test SET lastname = 'Jimenez' --actualizara todos los registros en el campo lastname
+
+UPDATE TEST SET LASTNAME = 'Perez' WHERE ID = 1 // actualizara solo ese registro en el campo lastname
+
+DELETE FROM Test // Borrara todos los registros de la tabla
+
+DELETE FROM Test WHERE id = 2 // Borrara solamente ese registro
+
+
+SELECT * FROM Test //Muestra todos los registros de la tabla
+
+Select * from Test WHERE id = 2 // Me mostrara solo ese registro
+
+SELECT * from TEST WHERE id > 2 // Mostrara todos los registros cuyo id sea mayor que 2
+
+
+select "nombre_columna" from "nombre_tabla" // sirve para mostrar solo la columna o las columnas que queramos (si queremos mostrar varias, las separamos por comas)
+
+
+select count(*) from "nombre_de_tabla" //Para mostrar cuantos registros hay en la tabla
+
+
+
+ORDER BY: Nos sirve para ordenar los registros segun el campo que se le indique (EJEMPLO)
+
+SELECT * FROM customer
+ORDER BY first_name ASC 
+
+
+
+GROUP BY: Sirve para agrupar registros por columnas, que en este caso nos hace un conteo de cuantos registros hay por customer
+
+SELECT customer_id, count(*) from rental group by customer_id;
+
+
+
+WHERE: Sirven para agregar una o mas condiciones en un select, podemos usar los operadores como >, <, >=, <=, =, !=, AND, OR
+
+select * from customer where customer_id=4 AND store_id=2
+SELECT * from payment where staff_id !=1
+
+
+
+BETWEEN: Sirven para mostrar registros que esten entre un valor y otro (EJEMPLO):
+
+select amount from payment where amount between 5 and 10
+
+
+IN: Mustra registros especificos que pongamos en la condicion (EJEMPLO):
+select * from payment where customer_id in(341, 347)
+
+
+DISTINCT: Sirve para omitir registros repetidos especificandole el campo donde no debe repetirlos
+
+select distinct customer_id from payment order by customer_id asc
+
+
+
+
+
+
+
+
+
+
