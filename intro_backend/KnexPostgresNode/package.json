@@ -1,0 +1,25 @@
+{
+  "name": "knexpostgresnode",
+  "version": "1.0.0",
+  "description": "CRUD con Knex, Express, Node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "knex",
+    "express",
+    "npm",
+    "node"
+  ],
+  "author": "M.T",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.5"
+  }
+}
