@@ -7,6 +7,7 @@ const db = require("./queries")
 //Declaramos el puerto donde corre el servidor local
 const PORT = 3000
 
+
 //Lo utilizamos para enviar las respuestas de tipo JSON al cliente
 app.use(express.json())
 
@@ -15,10 +16,10 @@ app.get('/', (request, response)=>{
 })
 
 app.get('/users', db.getAllUsers)
-app.get('/users/:id', 'metodo para obtener un usuario especifico por ID')
-app.post('/users', 'metodo para crear un usuario')
-app.put('/users/:id', 'metodo para actualzar usuario')
-app.delete('/users/:id', 'metodo para borrar un usuario')
+ app.get('/user', db.getUserById)
+ app.post('/users', db.createUser) // Solucionar problema de content-type apllication/json (sale undefined)
+ app.put('/users', db.updateUser)
+ app.delete('/users/:id', db.deleteUser)
 
 
 // Decirle a la aplicacion que se inicie en el puerto que especificamos
