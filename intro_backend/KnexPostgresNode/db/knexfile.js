@@ -1,23 +1,15 @@
-// Update with your config settings.
-
-/**
- * @type { Object.<string, import("knex").Knex.Config> }
- */
+const dotenv = require('dotenv')
+dotenv.config({path:'../.env'})
 module.exports = {
 
-  development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './dev.sqlite3'
-    }
-  },
 
-  staging: {
+  //Objeto de conexion para knex
+  development: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      database: process.env.DB,
+      user:process.env.DB_USER,
+      password:process.env.DB_PWD
     },
     pool: {
       min: 2,
@@ -28,10 +20,11 @@ module.exports = {
     }
   },
 
+
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
+      database: process.env.DB_URL,
       user:     'username',
       password: 'password'
     },
