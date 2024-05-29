@@ -9,6 +9,16 @@ class PersonService {
         //Pasar los datos destructurados a la capa del modelo
         return PersonModel.createPerson(email, firstName, lastName)
     }
+
+    updatePerson(personDta, id){
+        const {email, firstName, lastName } = personDta
+        return PersonModel.updatePerson(email, firstName, lastName, id)
+    }
+
+    findPersons(){
+        return PersonModel.findPersons()
+    }
+    
 }
 
 

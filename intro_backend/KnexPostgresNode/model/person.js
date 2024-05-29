@@ -16,6 +16,23 @@ class PersonModel{
             .returning("id")
             return id
     }
+
+   async updatePerson(email, firstName, lastName, id){
+        const item = await db
+        .update({
+            email, 
+            firstName, 
+            lastName
+        })
+        .from("person")
+        .where("id", id)
+        return item
+    }
+
+    async findPersons () {
+        const items = await db.select("*").from("person")
+        return items
+    }
 }
 
 module.exports = new PersonModel()
