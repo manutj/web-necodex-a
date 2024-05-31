@@ -3,6 +3,14 @@ import {Button, Form, FormGroup, Input, Label} from 'reactstrap'
 
 const AddEditForm = (props) => {
 
+    useEffect(() => {
+      if(props.item){
+        const {id, email, first_name, last_name} = props.item
+        setForm({id, email, first_name, last_name })
+      }
+    }, [])
+    
+
     const [form, setForm] = useState({
         first_name: "",
         last_name: "",
@@ -22,7 +30,7 @@ const AddEditForm = (props) => {
             <FormGroup>
                 <Label for='first_name'>Nombre</Label>
                 <Input
-                    value={''}
+                    value={form.first_name === null ? "" : form.first_name}
                     onChange={onChange}
                     type='text'
                     id='firstName'
@@ -32,7 +40,7 @@ const AddEditForm = (props) => {
             <FormGroup>
                 <Label for='last_name'>Apellido</Label>
                 <Input
-                    value={''}
+                    value={form.last_name === null ? "" : form.last_name}
                     onChange={onChange}
                     type='text'
                     id='lastName'
@@ -42,7 +50,7 @@ const AddEditForm = (props) => {
             <FormGroup>
                 <Label for='email'>Email</Label>
                 <Input
-                    value={''}
+                    value={form.email === null ? "" : form.email}
                     onChange={onChange}
                     type='email'
                     id='email'

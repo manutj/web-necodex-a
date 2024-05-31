@@ -12,7 +12,7 @@ const DataTable = (props) => {
                 <td>{item.email}</td>
                 <td>
                     <div>
-            <ModalForm buttonLabel={"Edit"} item={item}/>
+            <ModalForm buttonLabel={"Editar"} item={item}/>
                     </div>
 <Button color='danger'onClick={()=>console.log('Elemento eliminado')}>Eliminar</Button>
                 </td>

@@ -1,10 +1,9 @@
 import "./App.css";
 import React, {useState, useEffect} from 'react'
-import axios from "axios";
 import axiosInstance from "./config";
 import { Container, Row, Col } from "reactstrap";
-import DataTable from "../components/table/DataTable";
-import ModalForm from "../components/modal/ModalForm";
+import DataTable from "./components/table/DataTable";
+import ModalForm from "./components/modal/ModalForm";
 
 function App() {
 
@@ -38,7 +37,7 @@ function App() {
       </Row>
       <Row>
         <Col>
-          <ModalForm buttonLabel={'Add item'}/>
+          <ModalForm buttonLabel={'Agregar usuario'}/>
         </Col>
       </Row>
     </Container>

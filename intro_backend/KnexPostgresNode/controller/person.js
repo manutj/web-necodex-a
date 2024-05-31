@@ -2,6 +2,7 @@ const personService = require("../services/person");
 
 class PersonController {
   async createPerson(request, response) {
+    console.log('====>', request.body)
     try {
       const id = await personService.createPerson(request.body);
       response.status(201).json(`Se ha creado el usuario con id: ${id}`);

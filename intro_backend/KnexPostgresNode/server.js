@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
+const cors = require('cors')
 const Pool = require("pg").Pool;
+
+app.use(cors())
 
 //Import la carpeta queries que es donde hacemos las consultas a los endpoints
 const router = require("./queries");
@@ -14,6 +17,14 @@ const PORT = process.env.PORT || 3000;
 
 //Definimos un entorno de desarrollo
 const isProduction = process.env.NODE_ENV === "production";
+
+
+//Decodificamos el request.body para poder leerlo
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+)
 
 
 //definimos la cadena de conexion a la base de datos para el pg
@@ -30,6 +41,7 @@ const pool = new Pool({
 
 //definimos la ruta raiz de nuestra api
 app.use("/api", router);
+
 
 app.listen(PORT, () => {
   console.log(`aplicacion corriendo en el puerto ${PORT}`);

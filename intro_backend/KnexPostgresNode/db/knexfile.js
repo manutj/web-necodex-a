@@ -23,11 +23,7 @@ module.exports = {
 
   production: {
     client: 'postgresql',
-    connection: {
-      database: process.env.DB_URL,
-      user:     'username',
-      password: 'password'
-    },
+    connection: 'postgres://xwrhkzms:zu5JMMqXec_8fhUu8NgzrjDuk0bTnowX@baasu.db.elephantsql.com/xwrhkzms',
     pool: {
       min: 2,
       max: 10
