@@ -4,13 +4,7 @@ const { table } = require("../db");
 
 //Esta funcion nos sirve para crear tablas, columnas, constrainst, etc
 exports.up = function(knex) {
-  return knex.schema.createTable("person", (table)=>{
-    table.increments("id").primary();
-    table.string("email").notNullable().unique()
-    table.string("first_name").notNullable()
-    table.string("last_name").notNullable()
-    table.timestamps(true,true)
-  })
+  return knex.schema
 
   .createTable("customer", (table)=>{
     table.increments("customer_id").primary("customer_id", {
