@@ -1,0 +1,23 @@
+//indica a MongoDb que base de datos queremos usar. Si la base de datos no existe la creara autometicamente.
+
+use('sample_mflix')
+
+FIND : Equivalente a un SELECT en SQL
+
+//Devuelve el primer documento o registro que cumpla con los criterios de busqueda
+
+findOne({title:"The Great Train Robbery"}) // Buscar pelicula por titulo
+
+db.movies.findOne({_id:ObjectId("573a1390f29313caabcd42e8")})// Buscar pelicula por ID
+
+
+db.movies.find() //Encontrar todas las peliculas
+
+db.movies.find().count() //Devuelve el numero de peliculas que hay en la coleccion
+
+
+db.movies.find({},{title:1, _id:0}).limit(5) // Devuelve las ultimas 5 pekiculas ordenadas por title, el 1 en title significa que me mostrara el campo en la respuesta de la consulta y el 0 en el _id significa que no me mostrara ese campo
+
+
+db.movies.find({},{title:1, _id:0}).sort({title:-1}).limit(5) // Devuelve las ultimas 5 pekiculas ordenadas por title y el title -1 es para ordenar de forma descendente
+
