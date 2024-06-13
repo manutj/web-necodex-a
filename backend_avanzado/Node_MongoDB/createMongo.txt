@@ -1,0 +1,49 @@
+// INSERTAR DOCUMENTOS EN MongoDB
+
+InsertOne: Inserta solo un documento en la coleccion
+
+db.movies.insertOne({title: 'The DevF Show', 
+year:2024, 
+rated:'R', 
+runtime: 180, 
+countries:['Mexico'], 
+genres:['Life', 'Drama'], 
+director:['Guillermo del Toro'], 
+writers:['M.T', 'Francis Ford'], 
+actors:['Tom Cruise', 'Al Pacino', 'Morgan Freeman']
+})
+
+
+InsertMany: inserta varios documentos en la coleccion, se los pasamos dentro de un array
+
+db.movies.insertMany([{title: 'The DevF Show II', 
+year:2024, 
+rated:'R', 
+runtime: 180, 
+countries:['Mexico'], 
+genres:['Life', 'Drama'], 
+director:['Guillermo del Toro'], 
+writers:['M.T', 'Francis Ford'], 
+actors:['Tom Cruise', 'Al Pacino', 'Morgan Freeman']
+},
+{title: 'The DevF Show III', 
+year:2024, 
+rated:'R', 
+runtime: 180, 
+countries:['Mexico'], 
+genres:['Life', 'Drama'], 
+director:['Guillermo del Toro'], 
+writers:['M.T', 'Francis Ford'], 
+actors:['Tom Cruise', 'Al Pacino', 'Morgan Freeman']
+}, 
+{title: 'The DevF Show IV', 
+year:2024, 
+rated:'R', 
+runtime: 180, 
+countries:['Mexico'], 
+genres:['Life', 'Drama'], 
+director:['Guillermo del Toro'], 
+writers:['M.T', 'Francis Ford'], 
+actors:['Tom Cruise', 'Al Pacino', 'Morgan Freeman']
+}])
+

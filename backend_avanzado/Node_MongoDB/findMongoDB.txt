@@ -1,6 +1,6 @@
 //indica a MongoDb que base de datos queremos usar. Si la base de datos no existe la creara autometicamente.
 
-use('sample_mflix')
+use('sample_mflix') // Base de datos a utilizar
 
 FIND : Equivalente a un SELECT en SQL
 
@@ -21,3 +21,14 @@ db.movies.find({},{title:1, _id:0}).limit(5) // Devuelve las ultimas 5 pekiculas
 
 db.movies.find({},{title:1, _id:0}).sort({title:-1}).limit(5) // Devuelve las ultimas 5 pekiculas ordenadas por title y el title -1 es para ordenar de forma descendente
 
+
+
+//OPERADORES DE COMPARACION
+
+db.movies.find({'imdb.rating': {$gt: 9}}) // Traer las peliculas con rating imdb mayor a 9, "gt" equivale a mayor que
+
+
+db.movies.find({rated: {$in: ['PG', 'PG-13']}}).count() // Nos cuenta cuantas peliculas hay con rating "PG" y "pg-13", el "in" significa cualquiera de los valores que coincidan
+
+
+db.movies.find({'imdb.rating': {$ne: ''}}).count() // Nos cuenta cuantas peliculas hay con rating imdb, obviando a aquellas que en su rating tengan un valor vacio, "ne" significa not equal

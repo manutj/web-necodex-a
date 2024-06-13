@@ -1,0 +1,18 @@
+//ACTUALIZAR DOCUMENTOS EN MongoDB
+
+use('sample_mflix') // Base de datos a utilizar
+
+*/ ACTUALIZAR UN SOLO DOCUMENTO: Actualiza un solo documento que cumpla con la condicion especificada
+
+db.movies.updateOne({title:'The DevF Show'}, {$set: {director:['Steven Spielberg'], countries:['USA']}})
+
+
+*/ ACTUALIZAR VARIOS DOCUMENTOS: actualiza todos los documentos que cumplan con el filtro o condicion especificado
+
+db.movies.updateMany({title:/DevF/}, {$set:{runtime:120, rated:'PG-13'}}) // Actualizar las peliculas que tengan en su titulo la palabra "DevF" su runtime y su rated
+
+
+
+*/ PUSH: es un operador de actualizacion que agrega un valor nuevo a un campo de tipo array en un documento y si no existe tal campo, lo creara
+
+db.movies.updateMany({title:/DevF/}, {$push:{actors:'Angelina Jolie'}}) // Agregar un actor a las peliculas que coincidan con la condicion en su campo de tipo array
