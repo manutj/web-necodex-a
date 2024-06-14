@@ -1,0 +1,22 @@
+{
+  "name": "node_mongodb",
+  "version": "1.0.0",
+  "description": "Proyecto Express con MongoDB y Mongoose",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "M.T",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  }
+}

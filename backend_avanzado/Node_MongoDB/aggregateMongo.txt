@@ -1,0 +1,36 @@
+// Aggregations son operaciones que procesan varios documentos y devuelven un solo resultado
+
+//Es equivalente a los GROUP BY DE SQL
+
+use('sample_mflix') // Base de datos a utilizar
+
+db.movies.aggregate([{
+    $group: {
+        _id:'$rated', // el campo de referencia para contar y el campo donde los contara
+        count:{$sum:1}
+        }
+    }]) // Contar cuantas peliculas hay en cada rating existente y agruparlos por rating
+
+
+    */ Aggregation Pipeline:
+    Es una lista de operaciones que Mongo aplica a los documentos de una coleccion.Estos documentos pueden pasar por una serie de etapas como filtrado, ordenacion, agrupamiento, enlace
+
+db.movies.aggregate([{$group: {_id:'$rated',count:{$sum:1}}}, // ETAPA 1: Agrupar y sumar por rating
+ {$sort: {count:-1}}]) // ETAPA 2: Ordenar descendentemente
+
+
+
+//Filtrar por rating "PG-13", luego desagrupar el array de directores y por ultimo unir la collecion de movies con la coleccion de comments mediante el campo movie_id
+
+ db.movies.aggregate([
+  {$match: {rated: "PG-13"}}, //ETAPA 1 (FILTRAR)
+  {$unwind: "$directors"}, //ETAPA 2 (DESAGRUPAR ARRAY)
+  {$lookup:{ // ETAPA 3 (UNIR CON LA COLECCION COMMENTS)
+from:"comments",
+localField: "_id",
+foreignField:"movie_id",
+as: "comments"
+}}
+])
+
+

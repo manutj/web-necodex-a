@@ -20,3 +20,62 @@ TIPOS DE BASES DE DATOS NOSQL:
 \* Grafos: Facilitan el uso de aplicaciones con datos que estan altamente conectados, por ejemplo las redes sociales o los motores de recomendaciones. Por ejemplo Cassandra o Amazon Neptune
 
 \* Wide Columns (en memoria): se utilizan en videojuegos y analisis de datos en tiempo real, que requieren manejar una gran cantidad de informacion y el tiempo de respuesta debe ser de microsegundos. Amazon Redis o Amazon memoryDB
+
+
+
+
+*/ TRABAJAR CON BASES DE DATOS DE MONGO CON MONGOOSE
+
+Necesitamos lo siguiente:
+
+=> Esquema: definen la forma en como pedimos los datos para crear un documento en una coleccion, Necesitan llevar siempre un id, pero mongo lo crea automaticamente
+
+const blogSchema = new Schema({
+  title: String, // String is shorthand for {type: String}
+  author: String,
+  body: String,
+  comments: [{ body: String, date: Date }],
+  date: { type: Date, default: Date.now },
+  hidden: Boolean,
+  meta: {
+    votes: Number,
+    favs: Number
+  }
+});
+
+=> Modelo: Es el responsable de leer y crear los documentos de la base de datos. Trabajan en base a un esquema y se deben instanciar y a esta instancia se le conoce como documento
+
+//Creacion del modelo
+const breakFastModel = mongoose.model("Desayuno", breakFastSchema)
+
+const lunch = new breakFastModel({
+    huevos:4,
+    tocino:4,
+    bebida:"Malteada"
+})
+
+
+=> Validacion de esquema: Valida los campos del esquema como un middleware, arrojando errores si no le mando alguna propiedad o no cumplo con los requerimientos que mi esquema require
+
+
+const breakFastSchema = new Schema({
+    huevos:{
+        type:Number,
+        min:[6, "No son suficientes huevos, mandaste {VALUE}"],
+        max:[12, "Son muchos huevos, mandaste {VALUE}"],
+    },
+    tocino:{type:Number, required: [true, "Debes colocar tocino"]}, 
+    bebida:{
+        type: String,
+        enum:{
+            values:["Cafe", "Malteada"],
+            message:"{VALUE} no esta permitido"
+        },
+        required:[
+            function() {
+               return this.tocino > 3
+            },
+           "La bebida es requerida porque pediste mas de 3 tocinos" 
+        ]
+    }
+})
