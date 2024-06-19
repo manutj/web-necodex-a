@@ -55,9 +55,9 @@ const breakFastSchema = new Schema({
 const breakFastModel = mongoose.model("Desayuno", breakFastSchema)
 
 const lunch = new breakFastModel({
-    huevos:4,
+    huevos:6,
     tocino:4,
-    bebida:"Malteada"
+    bebida:"Soda"
 })
 
 lunch.save().then(()=>{
@@ -71,3 +71,6 @@ app.listen(PORT, () => {
     console.log(`aplicacion corriendo en el puerto ${PORT}`);
   });
   
+
+
+
