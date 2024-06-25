@@ -2,6 +2,8 @@ import { connect } from "./db/database.js"; //Importamos la conexion a mongo
 import dotenv from "dotenv";
 import express from "express"
 import morgan from 'morgan'
+import BookRoutes from "./routes/bookRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 //Dar acceso a las variables de entorno especificando la ruta del archivo .env
 dotenv.config({ path: "./.env" });
@@ -29,6 +31,10 @@ const PORT = process.env.PORT || 3000;
 
 // //Definimos el endopint raiz para mis rutas
 // api.use('/api/v1', carRoutes)
+
+api.use('/api/v1', authRoutes)
+api.use('/api/v1/books', BookRoutes)
+
 
 
 //Nois conectamos a la base de datos a traves de mi instancia de conexion
