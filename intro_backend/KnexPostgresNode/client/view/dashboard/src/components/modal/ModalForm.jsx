@@ -14,11 +14,11 @@ const ModalForm = (props) => {
   let title = "";
 
   if (buttonLabel === "Editar") {
-    button = <Button onClick={openModal} color="warning">{buttonLabel}</Button>;
+    button = <Button style={{float:'left', marginRight:'10px'}} onClick={openModal} color="warning">{buttonLabel}</Button>;
 
     title = "Editar usuario";
   } else {
-    button = <Button onClick={openModal} color="success">{buttonLabel}</Button>;
+    button = <Button style={{float:'left', marginRight:'10px'}} onClick={openModal} color="success">{buttonLabel}</Button>;
 
     title = "Agregar usuario";
   }

@@ -11,7 +11,7 @@ const DataTable = (props) => {
                 <td>{item.last_name}</td>
                 <td>{item.email}</td>
                 <td>
-                    <div>
+                    <div style={{width:'110px'}}>
             <ModalForm buttonLabel={"Editar"} item={item}/>
                     </div>
 <Button color='danger'onClick={()=>console.log('Elemento eliminado')}>Eliminar</Button>

@@ -1,0 +1,18 @@
+(SEPARAR PROYECTO DE BACKEND Y PROYECTO FRONTEND PREVIAMENTE)
+1. Tener nuestro proyecto como un repositorio git
+2. Tener anclado un repositorio remoto al proyecto
+3. Tener una cuenta de Netlify
+4. Ejecutar npm install netlify-cli -g
+5. Ejecutar npm install serverless-http
+6. Crear carpeta functions y meter el archivo server.js (este archivo puede cambiar de nombre) 
+
+7. Crear el archivo netlify.toml dentro de la raiz del proyecto backend y configurarlo (ver el archivo)
+
+8. Configurar el archivo server.js con la libreria de serverless-http para anclarlo con el build de netlify (ver el archivo)
+
+9. Agregar script "build" y modificar script "start" en el package.json
+
+10. Correr el comando npm run build
+
+11. Seguir las instrucciones que nos muestra la consola de netlify y probar el deploy que tendria que ser algo asi:
+https://knexpostgresnode.netlify.app/.netlify/functions/server/persons

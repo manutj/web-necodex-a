@@ -5,7 +5,7 @@ const knex = require('knex')
 const knexfile = require('./knexfile')
 
 //Enviar el de archivo de configurcion de conexion a la base de datos y aqui ya vienen los datos que queremos insertar desde el modelo. Se escoge una conexion de produccion de desarrollo
-const db = knex(knexfile.development)
+const db = knex(knexfile.production)
 
 
 module.exports = db

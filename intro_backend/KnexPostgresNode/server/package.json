@@ -4,8 +4,9 @@
   "description": "CRUD con Knex, Express, Node",
   "main": "server.js",
   "scripts": {
+    "build":"netlify deploy --prod",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "node functions/server.js",
     "migrate": "npx knex migrate:latest --knexfile db/knexfile.js"
   },
   "keywords": [
@@ -22,6 +23,7 @@
     "express": "^4.19.2",
     "knex": "^3.1.0",
     "nodemon": "^3.1.0",
-    "pg": "^8.11.5"
+    "pg": "^8.11.5",
+    "serverless-http": "^3.2.0"
   }
 }

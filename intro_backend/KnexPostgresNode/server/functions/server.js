@@ -3,11 +3,12 @@ const app = express();
 const dotenv = require("dotenv");
 const cors = require('cors')
 const Pool = require("pg").Pool;
+const serverless = require('serverless-http')
 
 app.use(cors())
 
 //Import la carpeta queries que es donde hacemos las consultas a los endpoints
-const router = require("./queries");
+const router = require("../queries");
 
 //Damos acceso a las variables de entorno
 dotenv.config({path:'./.env'});
@@ -40,11 +41,12 @@ const pool = new Pool({
 });
 
 //definimos la ruta raiz de nuestra api
-app.use("/api", router);
+app.use("/.netlify/functions/server", router);
+ const handler = serverless(app)
 
 
-app.listen(PORT, () => {
-  console.log(`aplicacion corriendo en el puerto ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`aplicacion corriendo en el puerto ${PORT}`);
+// });
 
-module.exports = pool;
+module.exports = {pool, handler};
