@@ -1,0 +1,7 @@
+Subida de archivos desde Imsomnia
+
+1. Hacer una peticion de tipo POST sobre el endpoint http://localhost:3000/api/v1/books
+
+2. Construir la peticion con la opcion multipart/form-data y llenamos los datos normalmente, con la diferencia que hay que en campo imgUrl, debemos colocar que es de tipo File(Esto te arroja la opcion de seleccionar un archivo de tu computadora y adjuntarlo al body)
+
+3. comprobar que se cree el nuevo libro con la imagen que adjuntamos manualmente en el body, verificar que devuelva el campo imgUrl con la url de la imagen almacenada en Firebase

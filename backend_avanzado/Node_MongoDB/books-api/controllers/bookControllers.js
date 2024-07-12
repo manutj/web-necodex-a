@@ -1,7 +1,20 @@
 import Author from "../models/Author";
 import Book from "../models/Book";
 
+const storage = require('../utils/storage.js')
+
 const createBook = async (req, res) => {
+
+    //Logica para recibir el req.file desde el cliente y que la captura el middleware multer
+    //Pasa al archivo de storage.js que se encarga de hacer la conexion con Firebase y se sube el archivo
+    //Se recibe la URL del archivo desde firebase y la agregamos al body para que se almacene en la base de datos
+
+    // if(req.file){
+    //   const url = await storage(req.file)
+    //   req.body.imgUrl = url
+    // }
+
+  //Las lineas anteriores las hemos comentado debido a que ahora se maneja desde el middleware manageFiles
 
     const bookData = req.body
 

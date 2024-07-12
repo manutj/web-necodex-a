@@ -10,9 +10,13 @@ import {
 import isAuth from "../middlewares/isAuth.js";
 import isAdmin from "../middlewares/isAdmin.js";
 
+const multerInstance = require("../middlewares/multer.js")
+const manageFiles = require("../middlewares/manageFiles.js")
+
 const bookRoutes = express.Router();
 
-bookRoutes.post("/", isAuth, isAdmin, createBook); //Create
+//Utilizamos esta ruta para ejecutar nuestros middlewares, podemos utilizar los que creamos convenientes
+bookRoutes.post("/", isAuth, isAdmin, multerInstance.single('imgUrl'), manageFiles, createBook); //Create
 bookRoutes.get("/", getAllBooks); // getall
 bookRoutes.get("/:bookId", getBookById); //getById
 bookRoutes.patch("/:bookId", isAuth, isAdmin, updateBookById); //UpdateById

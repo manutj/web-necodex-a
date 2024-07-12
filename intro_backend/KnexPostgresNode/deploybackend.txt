@@ -1,5 +1,5 @@
 (SEPARAR PROYECTO DE BACKEND Y PROYECTO FRONTEND PREVIAMENTE)
-1. Tener nuestro proyecto como un repositorio git
+1. Copiar aparte el proyecto de backend en otra carpeta de la PC y inicializarlo como un repositorio git 
 2. Tener anclado un repositorio remoto al proyecto
 3. Tener una cuenta de Netlify
 4. Ejecutar npm install netlify-cli -g
