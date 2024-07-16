@@ -1,0 +1,20 @@
+
+#Aqui van las instrucciones para crear una imagen de Docker
+
+#Le decimos que tiene que instalar Node y una version
+FROM node:14.17.1-alpine
+
+#Le decimos en donde van a estar las carpetas de mi proyecto dentro del contenedor (Este es el directorio raiz)
+WORKDIR /usr/src/app
+
+#Le decimos que copie el package.json y package-lock.json en la raiz del contenedor
+COPY package*.json ./
+
+#Le decimos que instale las dependencias del package
+RUN npm install
+
+#copiamos todas las carpetas del proyecto que esta en mi computadora en el contenedor
+COPY . .
+
+#corremos el proyecto
+CDM ["node", "server.js"]

@@ -1,0 +1,24 @@
+#Aqui van las instrucciones para crear multiples contenedores (En este caso para la API y base de datos)
+
+services:
+  docker-node:
+    build:
+      context: .
+      dockerfile: dockerfile
+    image: docker-node
+    container_name: docker-node
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+
+    #Lo que se esta interpretando es:
+
+    #Crear una imagen y un contenedor llamado docker-node
+    #Utilizar el dockerfile creado anteriormente
+    #Reiniciar el contenedor si sufre algun fallo
+    #Exponer el puerto del la computadora y del contenedor, hacer como un puente
+    #Trabajar con volumenes para utilizar los node_modules
