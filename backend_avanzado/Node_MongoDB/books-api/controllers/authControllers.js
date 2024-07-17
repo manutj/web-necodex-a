@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import User from '../models/Users'
+import User from '../models/Users.js'
 import jwt from 'jwt-simple'
 import dotenv from 'dotenv'
 

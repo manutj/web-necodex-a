@@ -1,7 +1,7 @@
-import Author from "../models/Author";
-import Book from "../models/Book";
+import Author from "../models/Author.js";
+import Book from "../models/Book.js";
 
-const storage = require('../utils/storage.js')
+//const storage = require('../utils/storage.js')
 
 const createBook = async (req, res) => {
 

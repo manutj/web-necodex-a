@@ -1,4 +1,4 @@
-const multer = require('multer');
+import multer from 'multer'
 
 const storage = process.env.NODE_ENV === "production" ?
 multer.memoryStorage()
@@ -8,7 +8,7 @@ multer.diskStorage({
 		cb(null, 'uploads') // Esta carpeta debemos crearla en la raiz de nuestro proyecto
 	},
 	filename: function(req, file, cb){
-		cb(null, `${file.originalname}_${Date.now()}`)
+		cb(null, `${file.originalname}`)
 	}
 })
 
@@ -20,4 +20,4 @@ const multerInstance = multer({
 	}
 })
 
-module.exports = multerInstance;
+export default multerInstance;

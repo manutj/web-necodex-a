@@ -11,7 +11,7 @@ const storage = new Storage({
 const bucket = storage.bucket("upload-node-db.appspot.com")
 
 
-module.exports = (file)=>{
+export default (file)=>{
 return new Promise((resolve, reject)=>{
 	if(!file) reject("No hay ningun archivo")
 
