@@ -29,39 +29,3 @@ services:
 
 
 
-    #Aqui van las instrucciones para crear multiples contenedores (En este caso para la API y base de datos)
-services:
-#Hacemos referencia a nuestro proyecto backend (API)
-  web:
-  #Ejecutamos el docker file para crear la imagen y luego el contenedor
-    build: .
-#Definimos el puerto de mi computadora que hace puente con el de mi contenedor
-    ports:
-      - "3000:3000"
-#Definimos que el proyecto backend depende de un proyecto de base de datos
-    depends_on:
-      - db
-
-    env_file:
-      - .env  
-
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-
-
-#db hace referencia a nuestra base de datos
-db: 
-#Indicamos que instalaremos la base de datos desde docker hub
-  image: mongo   
-  restart: always
-
-  #Indicamos que la base de datos utilizara ese puerto en el contenedor
-  expose: 27017 
-
-#Directorio para almacenar la informacion de la base de datos para que este no se elimine al hacer un re-build
-  volumes:
-      - mongodata:/data/db
-
-volumes:
-  mongodata:
