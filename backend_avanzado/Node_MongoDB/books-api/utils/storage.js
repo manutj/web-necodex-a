@@ -1,3 +1,6 @@
+import {createRequire} from "module"
+const require = createRequire(import.meta.url)
+
 const {Storage} = require('@google-cloud/storage')
 
 //Configuramos la conexion
@@ -15,7 +18,7 @@ export default (file)=>{
 return new Promise((resolve, reject)=>{
 	if(!file) reject("No hay ningun archivo")
 
-		const newFileName = `${file.originalname}_${Date.now()}` // Renombramos el archivo
+		const newFileName = `${file.originalname}` // Renombramos el archivo
 
 		const fileUpload = bucket.file(newFileName) //Crear un archivo nuevo en el bucket
 

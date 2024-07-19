@@ -1,4 +1,4 @@
-import uploadImage from '../utils/storage.mjs'
+import uploadImage from '../utils/storage.js'
 export default (req,res,next) => {
 
 //Guarda la URL de Firebase en el campo imgUrl del body de la peticion
