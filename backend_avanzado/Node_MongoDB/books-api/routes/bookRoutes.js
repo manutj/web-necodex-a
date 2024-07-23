@@ -22,4 +22,4 @@ bookRoutes.get("/:bookId", getBookById); //getById
 bookRoutes.patch("/:bookId", isAuth, isAdmin, updateBookById); //UpdateById
 bookRoutes.delete("/:bookId", isAuth, isAdmin, deleteBookById); //Delete
 
-export default bookRoutes;
+export default (api)=> api.use("/api/v1/books", bookRoutes)
