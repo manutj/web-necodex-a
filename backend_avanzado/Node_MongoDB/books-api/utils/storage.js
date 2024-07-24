@@ -1,5 +1,7 @@
-import {createRequire} from "module"
-const require = createRequire(import.meta.url)
+// import {createRequire} from "module"
+// const require = createRequire(import.meta.url)
+
+// const {Storage} = require('@google-cloud/storage')
 
 const {Storage} = require('@google-cloud/storage')
 
