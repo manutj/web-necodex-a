@@ -1,0 +1,16 @@
+{
+  "name": "numberfacts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "node-fetch": "^2.7.0"
+  }
+}
